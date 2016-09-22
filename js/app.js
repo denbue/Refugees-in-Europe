@@ -23,7 +23,7 @@
 			zoomControl: false
 		});
 
-		L.tileLayer('http://{s}.tiles.mapbox.com/v3/maxhasfun.kcb46pe9/{z}/{x}/{y}.png', {
+		L.tileLayer('https://{s}.tiles.mapbox.com/v3/maxhasfun.kcb46pe9/{z}/{x}/{y}.png', {
 			minZoom: 3,
 			maxZoom: 7,
 		}).addTo(map);
