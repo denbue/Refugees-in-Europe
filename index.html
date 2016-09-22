@@ -1,0 +1,81 @@
+	<!DOCTYPE html>
+	<html lang="en" class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Flüchtlinge und Europa</title>
+
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="shortcut icon" href="./favicon.ico">
+        
+		<link rel="stylesheet" href="css/app.css" />
+
+		<!-- leaflet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" type="text/css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+	</head>
+	<body onLoad="javascript:init();">
+		
+		<div id="welcome-wrapper">
+			<div id="welcome" class="center">
+				<h1>Flüchtlinge und Europa</h1>
+				<p class="highlight">
+					Hunderttausende Flüchtlinge kommen aktuell nach Europa.<br>
+					Wo kommen Sie her? Wo gehen Sie hin? Welche Routen nehmen Sie?</p>
+				<a class="btn start" onclick="$('#welcome-wrapper').empty().css('height', '0');">PROJEKT STARTEN</a><a class="btn start" onclick="$('#welcome-wrapper').empty().css('height', '0'); drawAbout();">MEHR INFORMATIONEN</a>
+			</div>
+		</div>
+		
+		<header id="title">
+			<h1>Flüchtlinge und Europa</h1><span class="article title"></span>
+			<a class="article btn close" onclick="closeModal();">SCHLIESSEN</a>
+		</header>
+		
+		<div id="legend">
+			<h2>Legende</h2>
+			<p><span class="blue"></span>Einwanderländer</p>
+			<p><span class="yellow"></span>Ausreiseländer</p>
+			<p><span class="red"></span>Reiserouten</p>
+			<p><a onclick="drawAbout();">Mehr Informationen</a></p>
+		</div>
+		
+		<div id="map-wrapper">
+			<div id="map"></div>
+		</div>
+		
+		<div id="modal-wrapper">
+			<div id="modal">
+				<section id="content"></section>
+			</div>
+		</div>
+		
+		<div id="about-wrapper">
+			<section id="about">
+					<h1>Über dieses Projekt</h1>
+					<p>Es gibt klare Richtlinien, wie mit Flüchtlingen an Grenzen umgegangen werden soll. Internationales und europäisches Recht garantieren ein faires Asylverfahren und weitreichende Einspruchmöglichkeiten. Jedoch unterscheidet sich in der Realität der Umgang von Staaten mit Flüchtlingen deutlich.</p>
+					<p>Einwanderung ist ein sehr komplexes Thema, das vorallem individuelle Geschichten schreibt. Die Weltlage verändert sich ständig, sodass es schwierig ist einen Überblick zu behalten.</p>
+					<p>Dieses Projekt hilft dabei die vom Flüchtlingsstrom betroffenen Länder und Regionen im Blick zu behalten. Es visualisiert woher die Flüchtlingsströme stammen, durch welche Regionen sie reisen und wo das Ziel sein könnte.<br>
+						Darüber hinaus durchsucht es die größten deutschen Onlinemedien nach aktuellen und relevanten Nachrichten zu betroffenen Ländern und Regionen und zu den Menschen, die sich auf diese ungewisse Reise begeben. Die angezeigten Beiträge sind auf den relevanten Teil beschnitten, ein Klick verweist auf den originalen Artikel."<br><br><br></p>
+					<p><strong>Quellen</strong></p>
+					<p class="disclaimer">
+						Datenbestände Zahlen: <a href="http://ec.europa.eu/eurostat/documents/4168041/6742650/KS-QA-15-003-EN-N.pdf/b7786ec9-1ad6-4720-8a1d-430fcfc55018" target="_blank">Eurostat</a> und <a href="http://frontex.europa.eu/trends-and-routes/migratory-routes-map/" target="_blank">Frontex</a><br>
+						Artikel: unterstützt von <a href="https://news.google.de/" target="_blank">Google News</a> und <a href="https://cse.google.de/" target="_blank">Google CSE</a><br>
+						Kartenmaterial: <a href="http://openstreetmap.org" target="_blank">OpenStreetMap</a> und <a href="http://mapbox.com" target="_blank">Mapbox</a><br>
+						Bild: <a href="https://www.flickr.com/photos/un_photo/5622093239/in/photolist-esHp2C-rnGVby-9cV24-7XfG6e-bViLqy-7ZjTHn-7JFr3u-8ZaGMo-fm752k-97q" target="_blank">United Nations UN Photo/OCHA/David Ohana</a>
+					</p>
+			</section>
+		</div>
+        
+		<div id="info-box" class="btn"></div>
+
+    </body>
+	
+	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script src="./js/countries-selected.js" type="text/javascript"></script>
+	<script src="./js/jquery.centerIn.js" type="text/javascript"></script>
+	<script src="./js/app.js" type="text/javascript"></script>
+</html>
