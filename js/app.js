@@ -5,7 +5,6 @@
 		about = $('#about-wrapper'),
 		content = $('#content'),
 		infoBox = $('#info-box'),
-		L,
 		keywords,
 		circle;
 
